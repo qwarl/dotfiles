@@ -1,0 +1,256 @@
+{
+  "layer": "top",
+  "modules-left": [
+    "custom/launcher",
+    "wlr/workspaces",
+    "custom/scratchpad-indicator",
+    "temperature",
+    "pulseaudio"
+  ],
+  "modules-center": [
+    "custom/weather",
+    "clock",
+    "bluetooth"
+  ],
+  "modules-right": [
+    "backlight",
+    "custom/pacman",
+    "cpu",
+    "memory",
+    "network",
+    "battery",
+    "custom/notification",
+    "tray",
+    "custom/powermenu"
+  ],
+  "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show",
+    "tooltip-format": "sudo pacman -Q linux",
+    "tooltip": false
+  },
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "disable-click": false,
+    "all-outputs": false,
+    "active-only": false,
+    "format": "{icon}",
+    "sort-by-number": true,
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十",
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    },
+    "persistent_workspaces": {
+      "1": [
+        "HDMI-A-1"
+      ],
+      "2": [
+        "HDMI-A-1"
+      ],
+      "3": [
+        "HDMI-A-1"
+      ],
+      "4": [
+        "HDMI-A-1"
+      ],
+      "5": [
+        "HDMI-A-1"
+      ],
+      "6": [
+        "HDMI-A-1"
+      ],
+      "7": [
+        "HDMI-A-1"
+      ],
+      "8": [
+        "HDMI-A-1"
+      ],
+      "9": [
+        "HDMI-A-1"
+      ],
+      "10": [
+        "HDMI-A-1"
+      ]
+    }
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "on-scroll-up": "light -A 7",
+    "on-scroll-down": "light -U 7",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "婢 0%",
+    "format-icons": {
+      "headphone": "",
+      "phone": "",
+      "portable": "",
+      "hands-free": "󱡏",
+      "headset": "󰋎",
+      "car": "",
+      "hdmi": "󰡁",
+      "default": [
+        "",
+        "󰕾",
+        "󰕾",
+        "󰕾",
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "tooltip": true
+  },
+  "battery": {
+    "interval": 30,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "󰁹",
+      "󰂂",
+      "󰂁",
+      "󰂀",
+      "󰁿",
+      "󰁾",
+      "󰁽",
+      "󰁼",
+      "󰁻",
+      "󰁺"
+    ],
+    "format-charging": "󰂄 {capacity}%",
+    "format-pluged": " {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "tooltip": true
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M  %A %b %d}",
+    "tooltip": true,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode"          : "month",
+      "mode-mon-col"  : 3,
+      "weeks-pos"     : "left",
+      "on-scroll"     : 1,
+      "on-click-right": "mode",
+      "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                }
+      },
+    "actions":  {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+      }
+  },
+  "memory": {
+    "interval": 1,
+    "format": "﬙ {percentage}%",
+    "states": {
+      "warning": 85
+    }
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%"
+  },
+  "network": {
+    "interval": 5,
+    "format-ethernet": "󰈀",
+    "format": "{ifname}",
+    "format-wifi": "󰖩 {essid}",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "tooltip-format-wifi": "{ipaddr} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ipaddr}/{cidr}",
+    "max-length": 20
+  },
+  "temperature": {
+    "tooltip": false,
+    "format": " {temperatureC}°C"
+  },
+  "custom/powermenu": {
+    "format": "",
+    "on-click": "~/.config/rofi/powermenu.sh",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+  "custom/pacman": {
+    "format": " {}",
+    "interval": 3600,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0",
+    "exec-if": "checkupdates | wc -l > 0",
+    "on-click-right": "kitty sudo pacman -Syu"
+  },
+  "custom/weather": {
+    "format": "{}",
+    "tooltip": true,
+    "interval": 120,
+    "exec": "~/.config/waybar/modules/weather.py",
+    "return-type": "json"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "",
+    "format-connected": " {num_connections}",
+    "tooltip-format": "{device_enumerate}",
+    "tooltip-format-connected-battery": "{device_battery_percentage}%",
+    "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+  }
+}
