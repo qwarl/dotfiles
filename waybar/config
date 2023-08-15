@@ -99,7 +99,7 @@
   "pulseaudio": {
     "scroll-step": 1,
     "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
+    "format-bluetooth": "{icon}  {volume}%",
     "format-muted": "婢 0%",
     "format-icons": {
       "headphone": "",
@@ -123,7 +123,7 @@
     "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "on-click-right": "pavucontrol",
     "tooltip": true
-  },
+},
   "battery": {
     "interval": 30,
     "states": {
@@ -191,6 +191,7 @@
     "format-ethernet": "󰈀",
     "format": "{ifname}",
     "format-wifi": "󰖩 {essid}",
+    "on-click": "~/.config/rofi/scripts/wifi-script/rofi-wifi-menu.sh",
     "format-disconnected": "󰖪",
     "tooltip-format": "{ifname} via {gwaddr}",
     "tooltip-format-wifi": "{ipaddr} ({signalStrength}%) ",
@@ -248,6 +249,7 @@
   "bluetooth": {
     "format": " {status}",
     "format-disabled": "",
+    "on-click":"~/.config/rofi/scripts/rofi-bluetooth",
     "format-connected": " {num_connections}",
     "tooltip-format": "{device_enumerate}",
     "tooltip-format-connected-battery": "{device_battery_percentage}%",
