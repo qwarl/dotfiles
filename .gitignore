@@ -2,6 +2,7 @@
 /btop
 /Code
 /dconf
+/microsoft-edge
 /fcitx
 /fcitx5
 /gtk-3.0
@@ -14,3 +15,4 @@
 /yay
 QtProject.conf
 pavucontrol.ini
+mimeapps.list

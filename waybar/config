@@ -204,7 +204,7 @@
   },
   "custom/powermenu": {
     "format": "",
-    "on-click": "~/.config/rofi/powermenu.sh",
+    "on-click": "~/.config/rofi/scripts/powermenu.sh",
     "tooltip": false
   },
   "tray": {
@@ -249,7 +249,7 @@
   "bluetooth": {
     "format": " {status}",
     "format-disabled": "",
-    "on-click":"~/.config/rofi/scripts/rofi-bluetooth",
+    "on-click":"~/.config/rofi/scripts/rofi-bluetooth.sh",
     "format-connected": " {num_connections}",
     "tooltip-format": "{device_enumerate}",
     "tooltip-format-connected-battery": "{device_battery_percentage}%",
