@@ -5,7 +5,8 @@
     "wlr/workspaces",
     "custom/scratchpad-indicator",
     "temperature",
-    "pulseaudio"
+    "pulseaudio",
+    "pulseaudio#microphone"
   ],
   "modules-center": [
     "custom/weather",
@@ -124,6 +125,17 @@
     "on-click-right": "pavucontrol",
     "tooltip": true
 },
+"pulseaudio#microphone": {
+  "format": "{format_source}",
+  "format-source": " {volume} %",
+  "format-source-muted": "",
+  "on-click": "~/.config/scripts/volume.sh --toggle-mic",
+  "on-click-right": "pavucontrol -t 4",
+  // "on-scroll-up": "~/.config/scripts/volume.sh --mic-inc",
+  "on-scroll-up": "pamixer --default-source -i 1",
+  "on-scroll-down": "pamixer --default-source -d 1",
+  "scroll-step": 1
+},
   "battery": {
     "interval": 30,
     "states": {
@@ -191,7 +203,7 @@
     "format-ethernet": "󰈀",
     "format": "{ifname}",
     "format-wifi": "󰖩 {essid}",
-    "on-click": "~/.config/rofi/scripts/wifi-script/rofi-wifi-menu.sh",
+    "on-click": "~/.config/scripts/rofi-scripts/wifi-script/rofi-wifi-menu.sh",
     "format-disconnected": "󰖪",
     "tooltip-format": "{ifname} via {gwaddr}",
     "tooltip-format-wifi": "{ipaddr} ({signalStrength}%) ",
@@ -200,6 +212,7 @@
   },
   "temperature": {
     "tooltip": false,
+    "interval":5,
     "format": " {temperatureC}°C"
   },
   "custom/powermenu": {
@@ -213,7 +226,7 @@
   },
   "custom/pacman": {
     "format": " {}",
-    "interval": 3600,
+    "interval": 5,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
     "exec-if": "checkupdates | wc -l > 0",
@@ -248,8 +261,9 @@
   },
   "bluetooth": {
     "format": " {status}",
+    "interval":5,
     "format-disabled": "",
-    "on-click":"~/.config/rofi/scripts/rofi-bluetooth.sh",
+    "on-click":"~/.config/scripts/rofi-scripts/rofi-bluetooth.sh",
     "format-connected": " {num_connections}",
     "tooltip-format": "{device_enumerate}",
     "tooltip-format-connected-battery": "{device_battery_percentage}%",
