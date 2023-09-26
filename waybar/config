@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": [
     "custom/launcher",
-    "wlr/workspaces",
+    "hyprland/workspaces",
     "custom/scratchpad-indicator",
     "temperature",
     "pulseaudio",
@@ -30,7 +30,7 @@
     "tooltip-format": "sudo pacman -Q linux",
     "tooltip": false
   },
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "disable-scroll": true,
     "disable-click": false,
     "all-outputs": false,
@@ -131,7 +131,6 @@
   "format-source-muted": "",
   "on-click": "~/.config/scripts/volume.sh --toggle-mic",
   "on-click-right": "pavucontrol -t 4",
-  // "on-scroll-up": "~/.config/scripts/volume.sh --mic-inc",
   "on-scroll-up": "pamixer --default-source -i 1",
   "on-scroll-down": "pamixer --default-source -d 1",
   "scroll-step": 1
@@ -226,7 +225,7 @@
   },
   "custom/pacman": {
     "format": " {}",
-    "interval": 5,
+    "interval": 10,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
     "exec-if": "checkupdates | wc -l > 0",
