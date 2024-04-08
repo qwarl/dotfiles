@@ -101,7 +101,7 @@
     "scroll-step": 1,
     "format": "{icon} {volume}%",
     "format-bluetooth": "{icon}  {volume}%",
-    "format-muted": "婢 0%",
+    "format-muted": " ",
     "format-icons": {
       "headphone": "",
       "phone": "",
@@ -121,7 +121,7 @@
       ]
     },
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "~/.config/scripts/normal-scripts/change-sound-ouput.sh",
     "on-click-right": "pavucontrol",
     "tooltip": true
 },
@@ -188,14 +188,14 @@
   },
   "memory": {
     "interval": 1,
-    "format": "﬙ {percentage}%",
+    "format": " {percentage}%",
     "states": {
       "warning": 85
     }
   },
   "cpu": {
     "interval": 1,
-    "format": " {usage}%"
+    "format": " {usage}%"
   },
   "network": {
     "interval": 5,
@@ -216,7 +216,7 @@
   },
   "custom/powermenu": {
     "format": "",
-    "on-click": "~/.config/rofi/scripts/powermenu.sh",
+    "on-click": "~/.config/scripts/rofi-scripts/powermenu.sh",
     "tooltip": false
   },
   "tray": {
@@ -225,7 +225,7 @@
   },
   "custom/pacman": {
     "format": " {}",
-    "interval": 10,
+    "interval": 5,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
     "exec-if": "checkupdates | wc -l > 0",

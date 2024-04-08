@@ -1,0 +1,44 @@
+[General]
+ConnectionListSortColumn=1
+
+[MainWindow]
+2560x1440 screen: Height=1440
+2560x1440 screen: Width=2560
+2560x1440 screen: Window-Maximized=true
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAESAAAFLvwCAAAAAfsAAAAwAHIAZQBtAG8AdABlAEQAZQBzAGsAdABvAHAAcwBEAG8AYwBrAFcAaQBkAGcAZQB0AAAAADAAAAUuAAAAhwD///8AAAnUAAAFJAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAABAAAAMABrAHIAZABjAF8AcgBlAG0AbwB0AGUAXwB2AGkAZQB3AF8AdABvAG8AbABiAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[hostpreferences][rdp://192.168.91.168]
+colorDepth=2
+console=false
+extraOptions=
+height=1440
+keyboardLayout=7
+performance=2
+remoteFX=true
+resolution=5
+scaleFactor=0
+shareMedia=/home/quan/Music
+showConfigAgain=true
+sound=0
+soundSystem=0
+walletSupport=true
+width=2560
+
+[hostpreferences][rdp://administrator@192.168.91.168]
+colorDepth=2
+console=false
+extraOptions=
+height=1440
+keyboardLayout=7
+performance=2
+remoteFX=true
+resolution=5
+scaleFactor=0
+shareMedia=/home/quan/Documents
+showConfigAgain=true
+sound=0
+soundSystem=0
+walletSupport=true
+width=2560

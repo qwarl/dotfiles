@@ -1,5 +1,5 @@
 configuration{
-    modi: "drun,window,filebrowser,keys,emoji";
+    modi: "drun,window,filebrowser,keys";
     lines: 5;
     font: "Meslo LGLDZ Nerd Font 13";
     show-icons: true;

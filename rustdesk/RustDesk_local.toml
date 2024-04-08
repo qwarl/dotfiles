@@ -1,0 +1,22 @@
+remote_id = '192.168.91.168'
+kb_layout_type = ''
+size = [
+    0,
+    0,
+    0,
+    0,
+]
+fav = []
+
+[options]
+remote-menubar-drag-left = '0.0'
+theme = 'dark'
+remote-menubar-drag-right = '1.0'
+
+[ui_flutter]
+peer-sorting = 'Remote ID'
+wm_Main = '{"width":2560.0,"height":1440.0,"offsetWidth":0.0,"offsetHeight":0.0,"isMaximized":true,"isFullscreen":false}'
+wm_PortForward = '{"width":616.0,"height":321.0,"offsetWidth":1292.0,"offsetHeight":44.0,"isMaximized":true,"isFullscreen":false}'
+wm_RemoteDesktop = '{"width":616.0,"height":321.0,"offsetWidth":1292.0,"offsetHeight":44.0,"isMaximized":true,"isFullscreen":false}'
+wm_Unknown = '{"width":616.0,"height":321.0,"offsetWidth":1292.0,"offsetHeight":44.0,"isMaximized":true,"isFullscreen":false}'
+wm_FileTransfer = '{"width":616.0,"height":321.0,"offsetWidth":1292.0,"offsetHeight":44.0,"isMaximized":true,"isFullscreen":false}'
